@@ -39,15 +39,17 @@ class Program
             }
             if (isCorrectInput)
             {
-                ConsoleKey choice2 = Console.ReadKey(true).Key;
+                Console.WriteLine("Нажмите Escape для выхода или любую другую клавишу для повторного запуска...");
 
-                Console.WriteLine("Нажмите escape для выхода...");
+                ConsoleKey choice2 = Console.ReadKey(true).Key;
 
                 switch (choice2)
                 {
                     case ConsoleKey.Escape:
-                        return;
+                        Environment.Exit(0);
+                        break;
                     default:
+                        Console.WriteLine();
                         continue;
                 }
             }
